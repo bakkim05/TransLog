@@ -16,80 +16,53 @@ subject(they, ellas).
 
 %Object
 
-object(angle, angulo).
-object(ant, hormiga).
-object(apple, manzana).
-object(arch, arco).
-object(arm, brazo).
-object(amry, ejercito).
-object(baby, bebe).
-object(bag, bolso).
-object(ball, bola).
-object(band, banda).
-object(bath, baño).
-object(bed, cama).
-object(bee, abeja).
-object(bell, campana).
-object(berry, baya).
-object(bird, pajaro).
-object(blade, cuchilla).
-object(board, tabla).
-object(boat, bote).
-object(bone, hueso).
-object(book, libro).
-object(boot, bota).
-object(bottle, botella).
-object(box, caja).
-object(boy, hombre).
-object(brain cerebro).
-object(branch, rama).
-object(brick, ladrillo).
-object(brush, cepillo).
-object(button, botón).
-object(cake, queque).
-object(camera, cámara).
-object(card, carta).
-object(car, carro).
-object(chain, cadena).
-object(cheese, queso).
-object(chest, pecho).
-object(chin, barbilla).
-object(church, iglesia).
-object(circle, circulo).
-object(clock, reloj).
-object(cloud, nube).
-object(cow, vaca).
-object(cup, vaso).
-object(dog, perro).
-object(door, puerta).
-object(dress, vestido).
-object(ear, oreja).
-object(egg, huevo).
-object(engine, motor).
-object(eye, ojo).
-object(face, cara).
-object(farm, granja).
-object(feather, pluma).
-object(finger, dedo).
-object(fish, pez).
-object(flag, bandera).
-object(floor, piso).
-object(foot, pie).
-object(fork, tenedor).
-object(garden, patio).
-object(girl, mujer).
-object(glove, guante).
-object(goat, cabra).
-object(gun, pistola).
-object(hair, pelo).
-object(hammer, martillo).
-object(hand, mano).
-object(hat, sombrero).
-object(head, cabeza).
-object(heart, corazón).
-object(horse, caballo).
-object(hospital, hospital).
-object(house, casa).
-object(island, isla).
-object(jewel, joya).
-object(key, llave).
+object(area, area, areas, areas).
+object(book, libro, books, libros).
+object(business, negocio, businesses, negocios).
+object(case, caso, cases, casos).
+object(child, nino, children, ninos).
+object(company, compania, companies, companias).
+object(country, pais, countries, paises).
+object(day, dia, days, dias).
+object(eye, ojo, eyes, ojos).
+object(fact, hecho, facts, hechos).
+object(family, familia, families, familias).
+object(government, gobierno, governments gobiernos).
+object(group, grupo, groups, grupos).
+object(hand, mano, hands, manos).
+object(home, hogar, homes, hogares).
+object(job, trabajo, jobs, trabajos).
+object(life, vida, lifes, vidas).
+object(lot, mucho, lots, muchos).
+object(man, hombre, men, hombres).
+object(money, plata).
+object(month, mes, months, meses).
+object(mother, madre, mothers, madres).
+object(sir, senor, sirs, senores).
+object(night, noche, nights, noches).
+object(number, numero, numbers, numeros).
+object(part, parte, parts, partes).
+object(person, persona, people, personas).
+object(place, lugar, places, lugares).
+object(point, punto, points, puntos).
+object(problem, problema, problems, problemas).
+object(program, programa, programs, programas).
+object(question, pregunta, questions, preguntas).
+object(right, derecho, rights, derechos).
+object(room, cuarto, rooms, cuartos).
+object(school, escuela, school, escuelas).
+object(state, estado, states, estados).
+object(story, historia, stories, historias).
+object(student, estudiante, students, estudiantes).
+object(study, estudio, studies, estudios).
+object(system, sistema, systems, sistemas).
+object(thing, cosa, things, cosas).
+object(time, timepo, times, tiempos).
+object(water, agua, waters, aguas).
+object(way, camino, ways, caminos).
+object(week, semana, weeks, semanas).
+object(women, mujer, woman, mujeres).
+object(word, palabra, words, palabras).
+object(work, trabajo, works, trabajos).
+object(world, mundo, worlds, mundos).
+object(year, ano, years, anos).
