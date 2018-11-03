@@ -1,68 +1,73 @@
 %Subject
 
-subject(i, yo).
-subject(you, tu).
-subject(he, el).
-subject(she, ella).
-subject(you, usted).
-subject(we, nosotros).
-subject(we, nosotras).
-subject(you, vosotros).
-subject(you, vosotras.
-subject(they, ellos).
-subject(they, ellas).
+subject([i, yo]).
+subject([you, tu]).
+subject([he, el]).
+subject([she, ella]).
+subject([you, usted]).
+subject([we, nosotros]).
+subject([we, nosotras]).
+subject([you, vosotros]).
+subject([you, vosotras]).
+subject([they, ellos]).
+subject([they, ellas]).
 
 %------------------------------------------------------------------------%
 
 %Object
+object([area,areas],[area, areas]).
+object([book,books],[libro,libros]).
+object([business,businesses],[negocio,negocios]).
+object([case,cases],[caso,casos]).
+object([child,children],[nino,ninos]).
+object([company,companies],[compania,companias]).
+object([country,countries],[pais,paises]).
+object([day,days],[dia,dias]).
+object([eye,eyes],[ojo,ojos]).
+object([fact,facts],[hecho,hechos]).
+object([family,families],[familia,familias]).
+object([government,governments],[gobierno,gobiernos]).
+object([group,groups],[grupo,grupos]).
+object([hand,hands],[mano,manos]).
+object([home,homes],[hogar,hogares]).
+object([job,jobs],[trabajo,trabajos]).
+object([life,lifes],[vida,vidas]).
+object([lot,lots],[mucho,muchos]).
+object([man,men],[hombre,hombres]).
+object([money],[plata]).
+object([month,months],[mes,meses]).
+object([mother,mothers],[madre,madres]).
+object([sir,sirs],[senor,senores]).
+object([night,nights],[noche,noches]).
+object([number,numbers],[numero,numeros]).
+object([part,parts],[parte,partes]).
+object([person,people],[persona,personas]).
+object([place,places],[lugar,lugares]).
+object([point,points],[punto,puntos]).
+object([problem,problems],[problema,problemas]).
+object([program,programs],[programa,programas]).
+object([question,questions],[pregunta,preguntas]).
+object([right,rights],[derecho,derechos]).
+object([room,rooms],[cuarto,cuartos]).
+object([school,schools],[escuela,escuelas]).
+object([state,states],[estado,estados]).
+object([story,stories],[historia,historias]).
+object([student,students],[estudiante,estudiantes]).
+object([study,studies],[studio,studios]).
+object([system,systems],[sistema,sistemas]).
+object([thing,things],[cosa,cosas]).
+object([time,times],[tiempo,tiempos]).
+object([water,waters],[agua,aguas]).
+object([way,ways],[camino,caminos]).
+object([week,weeks],[semana,semanas]).
+object([women,woman],[mujer,mujeres]).
+object([word,words],[palabra,palabras]).
+object([work,works],[trabajo,trabajos]).
+object([world,worlds],[mundo,mundos]).
+object([year,years],[ano,anos]).
 
-object(area, area, areas, areas).
-object(book, libro, books, libros).
-object(business, negocio, businesses, negocios).
-object(case, caso, cases, casos).
-object(child, nino, children, ninos).
-object(company, compania, companies, companias).
-object(country, pais, countries, paises).
-object(day, dia, days, dias).
-object(eye, ojo, eyes, ojos).
-object(fact, hecho, facts, hechos).
-object(family, familia, families, familias).
-object(government, gobierno, governments gobiernos).
-object(group, grupo, groups, grupos).
-object(hand, mano, hands, manos).
-object(home, hogar, homes, hogares).
-object(job, trabajo, jobs, trabajos).
-object(life, vida, lifes, vidas).
-object(lot, mucho, lots, muchos).
-object(man, hombre, men, hombres).
-object(money, plata).
-object(month, mes, months, meses).
-object(mother, madre, mothers, madres).
-object(sir, senor, sirs, senores).
-object(night, noche, nights, noches).
-object(number, numero, numbers, numeros).
-object(part, parte, parts, partes).
-object(person, persona, people, personas).
-object(place, lugar, places, lugares).
-object(point, punto, points, puntos).
-object(problem, problema, problems, problemas).
-object(program, programa, programs, programas).
-object(question, pregunta, questions, preguntas).
-object(right, derecho, rights, derechos).
-object(room, cuarto, rooms, cuartos).
-object(school, escuela, school, escuelas).
-object(state, estado, states, estados).
-object(story, historia, stories, historias).
-object(student, estudiante, students, estudiantes).
-object(study, estudio, studies, estudios).
-object(system, sistema, systems, sistemas).
-object(thing, cosa, things, cosas).
-object(time, timepo, times, tiempos).
-object(water, agua, waters, aguas).
-object(way, camino, ways, caminos).
-object(week, semana, weeks, semanas).
-object(women, mujer, woman, mujeres).
-object(word, palabra, words, palabras).
-object(work, trabajo, works, trabajos).
-object(world, mundo, worlds, mundos).
-object(year, ano, years, anos).
+%------------------------------------------------------------------------%
+
+%simple_present_verb
+
+present_verb()
