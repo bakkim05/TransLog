@@ -1,34 +1,77 @@
+%_Funcion que devuelve la cabeza de la lista_%
+get_head([Head|_],Head).
+get_tail([_|Tail],Tail).
+
+%_Funcion que se encargar de quitar los signos interrogativos_%
+quita_signos(Oracion, Oracion_sin_signos):-
+    split_string(Oracion, " ", "¿", Lista),
+    atomic_list_concat(Lista, ",", Atom),
+    atom_string(Atom, String),
+    split_string(String, "", "?", X),
+    get_head(X,Oracion_casi_lista),
+    split_string(Oracion_casi_lista,",","",Oracion_sin_signos).
+
+%_Funcion que se encarga de quitar las comas_%
+quita_comas(Lista_con_comas, Lista_corregida):-
+    atomic_list_concat(Lista_con_comas," ",Atom),
+    atom_string(Atom,String),
+    split_string(String," "," ",Lista_corregida).
+
+%_Funcion que se encarga de quitar los putnos_%
+quita_puntos(Lista_con_puntos, Lista_corregida):-
+    atomic_list_concat(Lista_con_puntos," ",Atom),
+    atom_string(Atom,String),
+    split_string(String," ",".",Lista_corregida).
+
+%_Fucion que llama al resto... es como un mini main_%
+prepara_oracion(Oracion,Oracion_procesada):- 
+    quita_signos(Oracion,Oracion_sin_signos),
+    quita_comas(Oracion_sin_signos,Oracion_sin_comas),
+    quita_puntos(Oracion_sin_comas,Oracion_procesada).
+
+to_string(List,String):-
+    atomic_list_concat(List,' ',Atom),
+    atom_string(Atom,String).
+ask:-
+    writeln('Escriba algo puto'),readln(C),
+    to_string(C,String),
+    prepara_oracion(String,Oracion_procesada),
+    oracion(Oracion_procesada,Traducida),
+    write(Traducida).
 
 %----------------------------------------------------------------%
 
 %core
 
-oracion(S0,S,TIME,T0,T):- 
-    sintagma_nominal(NUM,_,PERS,S0,S1,T0,T1),
-    sintagma_verbal(TIME,NUM,_,PERS,S1,S,T1,T).
+%S0 -> oracion completa
 
-oracion(S0,S,TIME,T0,T):- 
+oracion(S0,T0):- 
     pronombre(NUM,GEN,PERS,S0,S1,T0,T1), 
-    sintagma_verbal(TIME,NUM,GEN,PERS,S1,S,T1,T).
+    sintagma_verbal(_,NUM,GEN,PERS,S1,[],T1,[]),
+    write(T1).
+
+oracion(S0,T0):- 
+    sintagma_nominal(NUM,_,PERS,S0,S1,T0,T1),
+    sintagma_verbal(_,NUM,_,PERS,S1,[],T1,[]).
 
 %---------------------------------------------------
-
-sintagma_nominal(NUM,GEN,PERS,S0,S,T0,T):-
-    determinante(NUM,GEN,PERS,S0,S1,T0,T1),
-    nombre(NUM,GEN,S1,S,T1,T).
 
 sintagma_nominal(NUM,GEN,PERS,S0,S,T0,T):-
     determinante(NUM,GEN,PERS,S0,S1,T0,T1),
     nombre(NUM,GEN,S1,S2,T2,T),
     adjetivo(NUM,GEN,S2,S,T1,T2).
 
+sintagma_nominal(NUM,GEN,PERS,S0,S,T0,T):-
+    determinante(NUM,GEN,PERS,S0,S1,T0,T1),
+    nombre(NUM,GEN,S1,S,T1,T).
+
 %---------------------------------------------------------------
 
 sintagma_verbal(TIME,NUM,_,PERS,S0,S,T0,T):-
-    verbo(TIME,NUM,PERS,S0,S,T0,T).
-sintagma_verbal(TIME,NUM,_,PERS,S0,S,T0,T):-
     verbo(TIME,NUM,PERS,S0,S1,T0,T1),
     sintagma_nominal(_,_,_,S1,S,T1,T).
+sintagma_verbal(TIME,NUM,_,PERS,S0,S,T0,T):-
+    verbo(TIME,NUM,PERS,S0,S,T0,T).
 
 %---------------------------------------------------------------
 
