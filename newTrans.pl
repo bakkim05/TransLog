@@ -1,5 +1,4 @@
-%Tr%%%% Proyecto resuelto por el alumno Jordi Paraire (Febrero%
-%2001) %%%%
+
 oracion(S0,S,T0,T):- sintagma_nominal(NUM,_,PERS,S0,S1,T0,T1),
 sintagma_verbal(NUM,_,PERS,S1,S,T1,T).
 oracion(S0,S,T0,T):- pronombre(NUM,GEN,PERS,S0,S1,T0,T1),
@@ -47,7 +46,7 @@ verbo(singular,primera,['tengo'|S],['have'|S]).
 verbo(singular,primera,['escucho'|S],['hear'|S]).
 verbo(singular,primera,['ayudo'|S],['help'|S]).
 verbo(singular,primera,['mantengo'|S],['keep'|S]).
-verbo(singular,primera,['sé'|S],['know'|S]).
+verbo(singular,primera,['sï¿½'|S],['know'|S]).
 verbo(singular,primera,['salgo'|S],['leave'|S]).
 verbo(singular,primera,['dejo'|S],['let'|S]).
 verbo(singular,primera,['gustar'|S],['like'|S]).
