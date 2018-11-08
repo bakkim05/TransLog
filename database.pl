@@ -32,12 +32,15 @@ prepara_oracion(Oracion,Oracion_procesada):-
 to_string(List,String):-
     atomic_list_concat(List,' ',Atom),
     atom_string(Atom,String).
+
 ask:-
     writeln('Escriba algo puto'),readln(C),
-    to_string(C,String),
-    prepara_oracion(String,Oracion_procesada),
-    oracion(Oracion_procesada,Traducida),
-    write(Traducida).
+    traducir(C,Traduccion),
+    to_string(Traduccion,Listo),
+    writeln(Listo).
+
+traducir(Atra,Tradu):-oracion(Atra,Tradu).
+traducir(Atra,Tradu):-oracion(Tradu,Atra).
 
 %----------------------------------------------------------------%
 
