@@ -184,13 +184,13 @@ present_verb('work','trabajar').
 
 %core
 
-oracion(S0,S,T0,T):- 
+oracion(S0,S,TIME,T0,T):- 
     sintagma_nominal(NUM,_,PERS,S0,S1,T0,T1),
-    sintagma_verbal(NUM,_,PERS,S1,S,T1,T).
+    sintagma_verbal(TIME,NUM,_,PERS,S1,S,T1,T).
 
-oracion(S0,S,T0,T):- 
+oracion(S0,S,TIME,T0,T):- 
     pronombre(NUM,GEN,PERS,S0,S1,T0,T1), 
-    sintagma_verbal(NUM,GEN,PERS,S1,S,T1,T).
+    sintagma_verbal(TIME,NUM,GEN,PERS,S1,S,T1,T).
 
 %---------------------------------------------------
 
@@ -205,10 +205,10 @@ sintagma_nominal(NUM,GEN,PERS,S0,S,T0,T):-
 
 %---------------------------------------------------------------
 
-sintagma_verbal(NUM,_,PERS,S0,S,T0,T):-
-    verbo(NUM,PERS,S0,S,T0,T).
-sintagma_verbal(NUM,_,PERS,S0,S,T0,T):-
-    verbo(NUM,PERS,S0,S1,T0,T1),
+sintagma_verbal(TIME,NUM,_,PERS,S0,S,T0,T):-
+    verbo(TIME,NUM,PERS,S0,S,T0,T).
+sintagma_verbal(TIME,NUM,_,PERS,S0,S,T0,T):-
+    verbo(TIME,NUM,PERS,S0,S1,T0,T1),
     sintagma_nominal(_,_,_,S1,S,T1,T).
 
 %---------------------------------------------------------------
@@ -322,12 +322,13 @@ nombre(plural,masculino,['años'|S],S,['years'|T],T).
 
 %---------------------------------------------------------------
 
-verbo(singular,primera,['como'|S],S,['eat'|T],T).
-verbo(plural,primera,['comemos'|S],S,['eat'|T],T).
-verbo(singular,segunda,['comes'|S],S,['eat'|T],T).
-verbo(plural,segunda,['comeis'|S],S,['eat'|T],T).
-verbo(singular,tercera,['come'|S],S,['eats'|T],T).
-verbo(plural,tercera,['comen'|S],S,['eat'|T],T).
+verbo(presente,singular,primera,['como'|S],S,['eat'|T],T).
+verbo(presente,plural,primera,['comemos'|S],S,['eat'|T],T).
+verbo(presente,singular,segunda,['comes'|S],S,['eat'|T],T).
+verbo(presente,plural,segunda,['comeis'|S],S,['eat'|T],T).
+verbo(presente,singular,tercera,['come'|S],S,['eats'|T],T).
+verbo(presente,plural,tercera,['comen'|S],S,['eat'|T],T).
+
 
 %---------------------------------------------------------------
 
