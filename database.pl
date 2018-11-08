@@ -246,7 +246,7 @@ verbo(presente,singular,tercera,['llama'|S],S,['calls'|T],T).
 verbo(presente,plural,tercera,['llaman'|S],S,['call'|T],T).          
 
 verbo(presente,singular,primera,['puedo'|S],S,['can'|T],T).
-verbo(presente,plural,primera,['podemos|S],S,['can'|T],T).          
+verbo(presente,plural,primera,['podemos'|S],S,['can'|T],T).          
 verbo(presente,singular,segunda,['puedes'|S],S,['can'|T],T).        
 verbo(presente,plural,segunda,['podeis'|S],S,['can'|T],T).         
 verbo(presente,singular,tercera,['puede'|S],S,['can'|T],T).        
